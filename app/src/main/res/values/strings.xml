@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BD_SQLite_ROOM</string>
+    <string name="txt_usuario">INGRESA USUARIO</string>
+    <string name="txt_contraseña">INGRESA cONTRASEÑA</string>
+    <string name="hint_usuario">Correo Electronico</string>
+    <string name="hint_contraseña">Minimo 8 Caracteres</string>
+
+
+
+    <string name="btn_menu_modulo_alumnos">ALTAS ALUMNOS</string>
+    <string name="btn_menu_modulo_docentes">ELIMINAR ALUMNOS</string>
+    <string name="btn_menu_modulo_asignaturas">MODIFICAR ALUMNOS</string>
+    <string name="btn_menu_modulo_modulo_inscripciones">CONSULTAS</string>
+
+    <string name="btn_menu_cerrar_sesion">CERRAR SESION</string>
+    <string name="btn_acceder">Acceder</string>
+    <string name="btn_registrarse">Registrarse</string>
+
+
+
+</resources>

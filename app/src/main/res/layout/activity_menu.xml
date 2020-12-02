@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_alumnos"
+        android:layout_width="147dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="97dp"
+        android:onClick="abrirActivities"
+        android:text="@string/btn_menu_modulo_alumnos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_asignaturas"
+        android:layout_width="147dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="49dp"
+        android:text="@string/btn_menu_modulo_asignaturas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_docentes"
+        android:layout_width="147dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_menu_modulo_docentes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_alumnos" />
+
+    <Button
+        android:id="@+id/btn_menu_inscribir"
+        android:layout_width="147dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_menu_modulo_modulo_inscripciones"
+        app:layout_constraintStart_toEndOf="@+id/btn_docentes"
+        app:layout_constraintTop_toBottomOf="@+id/btn_asignaturas" />
+
+    <Button
+        android:id="@+id/btn_menu_cerrarsesion"
+        android:layout_width="246dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="243dp"
+        android:text="@string/btn_menu_cerrar_sesion"
+        app:icon="@android:drawable/btn_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
