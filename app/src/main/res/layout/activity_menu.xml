@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_alumnos"
+        android:id="@+id/btn_altas"
         android:layout_width="147dp"
         android:layout_height="86dp"
         android:layout_marginStart="45dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_asignaturas"
+        android:id="@+id/btn_modificaciones"
         android:layout_width="147dp"
         android:layout_height="86dp"
         android:layout_marginTop="97dp"
@@ -28,24 +28,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_docentes"
+        android:id="@+id/btn_bajas"
         android:layout_width="147dp"
         android:layout_height="86dp"
         android:layout_marginStart="45dp"
         android:layout_marginTop="24dp"
         android:text="@string/btn_menu_modulo_docentes"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_alumnos" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_altas" />
 
     <Button
-        android:id="@+id/btn_menu_inscribir"
+        android:id="@+id/btn_consultas"
         android:layout_width="147dp"
         android:layout_height="86dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="@string/btn_menu_modulo_modulo_inscripciones"
-        app:layout_constraintStart_toEndOf="@+id/btn_docentes"
-        app:layout_constraintTop_toBottomOf="@+id/btn_asignaturas" />
+        app:layout_constraintStart_toEndOf="@+id/btn_bajas"
+        app:layout_constraintTop_toBottomOf="@+id/btn_modificaciones" />
 
     <Button
         android:id="@+id/btn_menu_cerrarsesion"

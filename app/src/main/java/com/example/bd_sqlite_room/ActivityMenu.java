@@ -19,9 +19,19 @@ public class ActivityMenu extends Activity {
     public void abrirActivities(View v){
         Intent i;
         switch (v.getId()){
-            case R.id.btn_alumnos: i = new Intent(this, AtcivityAltas.class);
+            case R.id.btn_altas: i = new Intent(this, AtcivityAltas.class);
             startActivity(i);
             break;
+            case R.id.btn_modificaciones: i = new Intent(this, ActivityModificaciones.class);
+                startActivity(i);
+                break;
+            case R.id.btn_bajas: i = new Intent(this, ActivityBajas.class);
+                startActivity(i);
+                break;
+            case R.id.btn_consultas: i = new Intent(this, ActivityConsultas.class);
+                startActivity(i);
+                break;
+
 
 
         }
