@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityMenu"></activity>
-
         <activity android:name=".AtcivityAltas"></activity>
+        <activity android:name=".ActivityConsultas"></activity>
+        <activity android:name=".ActivityModificaciones"></activity>
+        <activity android:name=".ActivityBajas"></activity>
 
     </application>
 

@@ -16,6 +16,11 @@ public class Alumno {
     @ColumnInfo(name ="nombre")
     private String nombre;
 
+    public Alumno(@NonNull String numControl, @NonNull String nombre) {
+        this.numControl = numControl;
+        this.nombre = nombre;
+    }
+
     @NonNull
     public String getNumControl() {
         return numControl;
@@ -32,5 +37,13 @@ public class Alumno {
 
     public void setNombre(@NonNull String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "numControl='" + numControl + '\'' +
+                ", nombre='" + nombre + '\'' +
+                '}';
     }
 }

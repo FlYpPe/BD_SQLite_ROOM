@@ -6,26 +6,23 @@
     android:layout_height="match_parent"
     android:background="#304769">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="370dp"
-        android:text="Button"
+    <ListView
+        android:id="@+id/listViewAlumnos"
+        android:layout_width="325dp"
+        android:layout_height="611dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="29dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="228dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="91dp"
-        android:layout_marginTop="95dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="179dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="24dp"
+        android:text="Consultas"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

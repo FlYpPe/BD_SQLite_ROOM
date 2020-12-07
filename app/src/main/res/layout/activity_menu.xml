@@ -23,6 +23,7 @@
         android:layout_height="86dp"
         android:layout_marginTop="97dp"
         android:layout_marginEnd="49dp"
+        android:onClick="abrirActivities"
         android:text="@string/btn_menu_modulo_asignaturas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +34,7 @@
         android:layout_height="86dp"
         android:layout_marginStart="45dp"
         android:layout_marginTop="24dp"
+        android:onClick="abrirActivities"
         android:text="@string/btn_menu_modulo_docentes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_altas" />
@@ -43,6 +45,7 @@
         android:layout_height="86dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
+        android:onClick="abrirActivities"
         android:text="@string/btn_menu_modulo_modulo_inscripciones"
         app:layout_constraintStart_toEndOf="@+id/btn_bajas"
         app:layout_constraintTop_toBottomOf="@+id/btn_modificaciones" />

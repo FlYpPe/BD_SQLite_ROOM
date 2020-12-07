@@ -12,17 +12,45 @@ import Entidades.Alumno;
 
 @Dao
 public interface AlumnoDAO {
+/*
+    @Insert
+    public void InsertarAlumnos(Alumno...Alumnos);
+
+    @Query("DELETE FROM alumno WHERE numControl = :nc")
+    void eliminarPorNumControl(String nc);
+
+    @Delete
+    void eliminar(Alumno alumno);
+
+    @Update
+    public void actualizarAlumno(Alumno a);
+
+    @Query("Select * FROM alumnos WHERE numControl LIKE :nc AND last_name LIKE :last")
+    Alumno findByName(String nc, String nombre);
+
+    @Query("SELECT * from Alumno")
+    List<Alumno> obtenerTodos();
+*/
+    //Altas
+    @Insert
+    public void insertarAlumno(Alumno alumno);
 
     @Insert
     public void InsertarAlumnos(Alumno...Alumnos);
 
-  //  @Delete
+    //Bajas
+    @Query("DELETE FROM alumno WHERE numControl = :nc")
+    void eliminarPorNumControl(String nc);
 
-  //  @Update
+    //Cambios
+    @Query("UPDATE alumno SET nombre=:n WHERE numControl = :nc")
+    void modificarPorNumControl(String nc, String n);
 
-    @Query("SELECT * from Alumno")
+    //Consultas
+    @Query("SELECT * FROM alumno")
     List<Alumno> obtenerTodos();
 
-
+    @Query("SELECT * FROM alumno WHERE numControl LIKE :nc")
+    Alumno findByName(String nc);
 
 }
