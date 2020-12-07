@@ -21,7 +21,7 @@ public class AtcivityAltas extends ActivityMenu{
         setContentView(R.layout.activity_altas);
 
         nombre = findViewById(R.id.caja_nombre);
-        
+
 
         num = findViewById(R.id.caja_num_control);
 

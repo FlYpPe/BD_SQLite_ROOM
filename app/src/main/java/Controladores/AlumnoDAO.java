@@ -51,6 +51,6 @@ public interface AlumnoDAO {
     List<Alumno> obtenerTodos();
 
     @Query("SELECT * FROM alumno WHERE numControl LIKE :nc")
-    Alumno findByName(String nc);
+    Alumno obtenerUno(String nc);
 
 }

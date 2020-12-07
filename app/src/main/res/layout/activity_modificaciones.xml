@@ -86,13 +86,19 @@
         android:text="ISC" />
 
     <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="refrescar" />
+
+    <Button
         android:id="@+id/btn_agregar_alumno"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="#F05924"
-        android:onClick="agregarAlumno"
+        android:onClick="modificarRegistro"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textSize="20dp"
