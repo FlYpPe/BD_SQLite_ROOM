@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:background="#F05924"
-        android:onClick="agregarAlumno"
+        android:onClick="agregarRegistro"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/white"
         android:textSize="20dp"

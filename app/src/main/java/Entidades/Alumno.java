@@ -25,7 +25,6 @@ public class Alumno {
     public String getNumControl() {
         return numControl;
     }
-
     public void setNumControl(@NonNull String numControl) {
         this.numControl = numControl;
     }
@@ -34,7 +33,6 @@ public class Alumno {
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(@NonNull String nombre) {
         this.nombre = nombre;
     }
