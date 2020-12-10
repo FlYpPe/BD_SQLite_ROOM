@@ -11,7 +11,7 @@ import Entidades.Ordenes;
 @Database(entities = {Ordenes.class}, version = 1, exportSchema = false)
 public abstract class RestaurantBD extends RoomDatabase {
 
-    public abstract BaseDAO alumnoDao();
+    public abstract BaseDAO OrdenesDao();
     private static RestaurantBD INSTANCE;
 
     public static RestaurantBD getAppDatabase(Context context) {

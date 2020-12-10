@@ -28,5 +28,55 @@ public class Ordenes {
     @ColumnInfo(name ="idMesero")
     private String idMesero;
 
+    public Ordenes(@NonNull String idOrden, @NonNull String fecha, int cantidad, @NonNull String tipoPago, @NonNull String idMesero) {
+        this.idOrden = idOrden;
+        this.fecha = fecha;
+        this.cantidad = cantidad;
+        this.tipoPago = tipoPago;
+        this.idMesero = idMesero;
+    }
 
+    @NonNull
+    public String getIdOrden() {
+        return idOrden;
+    }
+
+    public void setIdOrden(@NonNull String idOrden) {
+        this.idOrden = idOrden;
+    }
+
+    @NonNull
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(@NonNull String fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    @NonNull
+    public String getTipoPago() {
+        return tipoPago;
+    }
+
+    public void setTipoPago(@NonNull String tipoPago) {
+        this.tipoPago = tipoPago;
+    }
+
+    @NonNull
+    public String getIdMesero() {
+        return idMesero;
+    }
+
+    public void setIdMesero(@NonNull String idMesero) {
+        this.idMesero = idMesero;
+    }
 }

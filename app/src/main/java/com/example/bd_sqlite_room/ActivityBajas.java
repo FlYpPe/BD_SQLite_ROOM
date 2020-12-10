@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import Entidades.Alumno;
 import baseDatos.EscuelaBD;
+import baseDatos.RestaurantBD;
 
 public class ActivityBajas extends Activity {
     EditText nombre, num;
@@ -31,7 +32,8 @@ public class ActivityBajas extends Activity {
             @Override
             public void run() {
                 //EscuelaBD bd = Room.databaseBuilder(getBaseContext(),EscuelaBD.class, "escuela").build();
-                EscuelaBD bd = EscuelaBD.getAppDatabase(getBaseContext());
+                //EscuelaBD bd = EscuelaBD.getAppDatabase(getBaseContext());
+                RestaurantBD bd = RestaurantBD.getAppDatabase(getBaseContext());
                 //bd.alumnoDao().insertarAlumno(new Alumno("05", "Luke"));
                 //String a = String.valueOf(nombre.getText());
                 String b = String.valueOf(num.getText());
@@ -40,7 +42,8 @@ public class ActivityBajas extends Activity {
                             PRUEBA QUE NO DEBERIA IR AQUI
                  ------------------------------------------------------------------------------- */
                 try {
-                    bd.alumnoDao().eliminarPorNumControl(b);
+                    bd.OrdenesDao().eliminarPoridOrden(b);
+                    //bd.alumnoDao().eliminarPorNumControl(b);
                 }catch (Exception e){
 
                 }
