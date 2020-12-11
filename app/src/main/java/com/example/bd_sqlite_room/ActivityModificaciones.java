@@ -48,13 +48,11 @@ public class ActivityModificaciones extends Activity {
 
                     String b = String.valueOf(idOrden.getText());
                     RestaurantBD bd = RestaurantBD.getAppDatabase(getBaseContext());
-                    //EscuelaBD bd = EscuelaBD.getAppDatabase(getBaseContext());
                     Ordenes ord = bd.OrdenesDao().obtenerUno(b);
                     String c = String.valueOf(ord.getFecha());
                     String d = String.valueOf(ord.getCantidad());
                     String e = String.valueOf(ord.getTipoPago());
                     String f = String.valueOf(ord.getIdMesero());
-                    //Alumno alum = bd.alumnoDao().obtenerUno(b);
 
                     cantidad.setText(d);
                     meserom.setText(f);
