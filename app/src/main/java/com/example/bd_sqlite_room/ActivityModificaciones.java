@@ -109,20 +109,6 @@ public class ActivityModificaciones extends Activity {
                 String f = String.valueOf(meserom.getText());
                 bd.OrdenesDao().modificarPoridOrden(b,c,d,e,f);
 
-                //String a = String.valueOf(num.getText());
-                //String b = String.valueOf(nombre.getText());
-
-                //EscuelaBD bd = EscuelaBD.getAppDatabase(getBaseContext());
-
-                //bd.alumnoDao().modificarPorNumControl(a, b);
-                /*-----------------------------------------------------------------------------
-                            PRUEBA QUE NO DEBERIA IR AQUI
-                 ------------------------------------------------------------------------------- */
-                //bd.alumnoDao().eliminarPorNumControl("04");
-
-                /*-----------------------------------------------------------------------------
-                            PRUEBA QUE NO DEBERIA IR AQUI
-                 ------------------------------------------------------------------------------- */
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
