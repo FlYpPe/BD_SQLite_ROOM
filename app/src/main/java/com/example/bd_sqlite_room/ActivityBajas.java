@@ -11,16 +11,12 @@ import androidx.annotation.Nullable;
 import baseDatos.RestaurantBD;
 
 public class ActivityBajas extends Activity {
-    EditText nombre, num;
+    EditText nombre, idord;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bajas);
-        //nombre = findViewById(R.id.caja_nombre);
-
-        //String a = String.valueOf(nombre.getText());
-
-        num = findViewById(R.id.idor);
+        idord = findViewById(R.id.idor);
     }
 
     public void eliminarRegistro(View v){
@@ -30,7 +26,7 @@ public class ActivityBajas extends Activity {
             @Override
             public void run() {
                 RestaurantBD bd = RestaurantBD.getAppDatabase(getBaseContext());
-                String b = String.valueOf(num.getText());
+                String b = String.valueOf(idord.getText());
 
                 /*-----------------------------------------------------------------------------
                             PRUEBA QUE NO DEBERIA IR AQUI
