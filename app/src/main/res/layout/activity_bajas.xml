@@ -7,7 +7,7 @@
     android:background="#304769">
 
     <EditText
-        android:id="@+id/num"
+        android:id="@+id/idor"
         android:layout_width="228dp"
         android:layout_height="46dp"
         android:layout_marginStart="72dp"

@@ -3,16 +3,15 @@ package com.example.bd_sqlite_room;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import Entidades.Alumno;
-import baseDatos.EscuelaBD;
+import Entidades.Ordenes;
+import baseDatos.RestaurantBD;
 
 public class AtcivityAltas extends ActivityMenu{
 
-    EditText nombre, num;
+    EditText idOrden, fecha, cantidad, tipo, mesero;
 
 
     @Override
@@ -20,11 +19,11 @@ public class AtcivityAltas extends ActivityMenu{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_altas);
 
-        nombre = findViewById(R.id.caja_nombre);
-
-
-        num = findViewById(R.id.caja_num_control);
-
+        fecha = findViewById(R.id.caja_fecham);
+        tipo = findViewById(R.id.caja_tipom);
+        cantidad = findViewById(R.id.caja_cant);
+        idOrden = findViewById(R.id.caja_idordenm);
+        mesero = findViewById(R.id.caja_meserom);
     }
 
 
@@ -34,24 +33,22 @@ public class AtcivityAltas extends ActivityMenu{
         new Thread(new Runnable() {
             @Override
             public void run() {
-                //EscuelaBD bd = Room.databaseBuilder(getBaseContext(),EscuelaBD.class, "escuela").build();
-                String a = String.valueOf(nombre.getText());
-                String b = String.valueOf(num.getText());
-                EscuelaBD bd = EscuelaBD.getAppDatabase(getBaseContext());
-                bd.alumnoDao().insertarAlumno(new Alumno(a, b));
+                try {
+                    String a = String.valueOf(idOrden.getText());
+                    String b = String.valueOf(fecha.getText());
+                    int c = Integer.parseInt(String.valueOf(cantidad.getText()));
+                    String d = String.valueOf(tipo.getText());
+                    String e = String.valueOf(mesero.getText());
+                    RestaurantBD bd = RestaurantBD.getAppDatabase((getBaseContext()));
+                    bd.OrdenesDao().insertarAlumno(new Ordenes(a,b,c,d,e));
 
-                /*-----------------------------------------------------------------------------
-                            PRUEBA QUE NO DEBERIA IR AQUI
-                 ------------------------------------------------------------------------------- */
-                //bd.alumnoDao().eliminarPorNumControl("04");
-                //bd.alumnoDao().modificarPorNumControl("01", "SALVATORE");
-                /*-----------------------------------------------------------------------------
-                            PRUEBA QUE NO DEBERIA IR AQUI
-                 ------------------------------------------------------------------------------- */
+                }catch (Exception e){
+                    System.out.println();e.printStackTrace();
+                }
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(getBaseContext(), "AGREGADO CON EXITO", Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getBaseContext(), "AGREGADO CON EXITO", Toast.LENGTH_LONG).show();
                     }
                 });
 

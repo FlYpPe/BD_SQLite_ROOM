@@ -79,4 +79,16 @@ public class Ordenes {
     public void setIdMesero(@NonNull String idMesero) {
         this.idMesero = idMesero;
     }
+
+
+    @Override
+    public String toString() {
+        return "Ordenes{" +
+                "idOrden='" + idOrden + '\'' +
+                ", fecha='" + fecha + '\'' +
+                ", cantidad=" + cantidad +
+                ", tipoPago='" + tipoPago + '\'' +
+                ", idMesero='" + idMesero + '\'' +
+                '}';
+    }
 }

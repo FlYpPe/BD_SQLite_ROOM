@@ -28,6 +28,7 @@ public class ActivityConsultas extends Activity {
         new Thread(new Runnable() {
             @Override
             public void run() {
+
                 //EscuelaBD bd = Room.databaseBuilder(getBaseContext(), EscuelaBD.class, "escuela").build();
                 RestaurantBD bd = Room.databaseBuilder(getBaseContext(), RestaurantBD.class, "Restaurant").build();
                 //bd.alumnoDao().InsertarAlumnos(new Alumno("01","jojo"));
@@ -41,7 +42,7 @@ public class ActivityConsultas extends Activity {
                         listOrdenes = findViewById(R.id.listViewAlumnos);
                         //listAlumnos = findViewById(R.id.listViewAlumnos);
                         //ArrayAdapter adaptador = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1,listaAlumnos);
-                        ArrayAdapter adapt = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1,listaAlumnos);
+                        ArrayAdapter adapt = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1,listaOrdenes);
                         listOrdenes.setAdapter(adapt);
                         //listAlumnos.setAdapter(adaptador);
                     }

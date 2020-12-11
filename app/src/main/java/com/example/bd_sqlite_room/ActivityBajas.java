@@ -8,8 +8,6 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
-import Entidades.Alumno;
-import baseDatos.EscuelaBD;
 import baseDatos.RestaurantBD;
 
 public class ActivityBajas extends Activity {
@@ -22,7 +20,7 @@ public class ActivityBajas extends Activity {
 
         //String a = String.valueOf(nombre.getText());
 
-        num = findViewById(R.id.num);
+        num = findViewById(R.id.idor);
     }
 
     public void eliminarRegistro(View v){

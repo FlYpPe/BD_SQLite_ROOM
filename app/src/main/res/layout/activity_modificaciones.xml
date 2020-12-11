@@ -11,6 +11,12 @@
     android:gravity="center"
     android:padding="50dp">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="184dp"
+        android:layout_height="151dp"
+        android:foreground="@drawable/ic_local_dining_24px" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -20,79 +26,56 @@
     </ImageView>
 
 
-
-
     <EditText
-        android:id="@+id/caja_num_control"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/caja_idordenm"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@android:color/white"
         android:inputType="text"
         android:padding="10dp" />
 
     <EditText
-        android:id="@+id/caja_nombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/caja_fecham"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@android:color/white"
-        android:padding="10dp"
-        android:text="p" />
+        android:padding="10dp" />
 
     <EditText
-        android:id="@+id/caja_primer_ap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/caja_cantidadm"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@android:color/white"
-        android:padding="10dp"
-        android:text="a" />
+        android:ems="10"
+        android:inputType="number" />
 
     <EditText
-        android:id="@+id/caja_segundo_ap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/caja_tipom"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@android:color/white"
-        android:padding="10dp"
-        android:text="r" />
+        android:padding="10dp" />
 
     <EditText
-        android:id="@+id/caja_edad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/caja_meserom"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_margin="5dp"
         android:background="@android:color/white"
-        android:padding="10dp"
-        android:text="2" />
-
-    <EditText
-        android:id="@+id/caja_semestre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:padding="10dp"
-        android:text="100" />
-
-    <EditText
-        android:id="@+id/caja_carrera"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@android:color/white"
-        android:padding="10dp"
-        android:text="ISC" />
+        android:padding="10dp" />
 
     <Button
         android:id="@+id/btn_refresh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:onClick="refrescar" />
 
     <Button
-        android:id="@+id/btn_agregar_alumno"
+        android:id="@+id/btn_agregar"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
