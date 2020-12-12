@@ -28,6 +28,8 @@ public class ActivityModificaciones extends Activity {
         idOrden = findViewById(R.id.caja_idordenm);
         meserom = findViewById(R.id.caja_meserom);
 
+
+
     }
 
     public void refrescar(View v){

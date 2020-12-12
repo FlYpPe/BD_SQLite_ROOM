@@ -43,11 +43,11 @@
         android:id="@+id/btn_consultas"
         android:layout_width="147dp"
         android:layout_height="86dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="49dp"
         android:onClick="abrirActivities"
         android:text="@string/btn_menu_modulo_modulo_inscripciones"
-        app:layout_constraintStart_toEndOf="@+id/btn_bajas"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_modificaciones" />
 
     <Button

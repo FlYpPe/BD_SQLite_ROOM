@@ -2,7 +2,10 @@ package com.example.bd_sqlite_room;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
@@ -16,41 +19,61 @@ import baseDatos.EscuelaBD;
 import baseDatos.RestaurantBD;
 
 public class ActivityConsultas extends Activity {
-    ListView listAlumnos;
-    List<Alumno> listaAlumnos;
+
+    //ListView listAlumnos;
+    //List<Alumno> listaAlumnos;
     ListView listOrdenes;
     List<Ordenes> listaOrdenes;
-
+    EditText editable;
+    ArrayAdapter<String> adaptador;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultas);
+
+        editable = (EditText) findViewById(R.id.caja_editable);
+        listOrdenes = findViewById(R.id.listViewAlumnos);
+
+
+        editable.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            adaptador.getFilter().filter(s);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         new Thread(new Runnable() {
             @Override
             public void run() {
 
-                //EscuelaBD bd = Room.databaseBuilder(getBaseContext(), EscuelaBD.class, "escuela").build();
                 RestaurantBD bd = Room.databaseBuilder(getBaseContext(), RestaurantBD.class, "Restaurant").build();
-                //bd.alumnoDao().InsertarAlumnos(new Alumno("01","jojo"));
-                //bd.alumnoDao().InsertarAlumnos(new Alumno("02","hehe"));
-                //bd.alumnoDao().InsertarAlumnos(new Alumno("03","sese"));
                 listaOrdenes = bd.OrdenesDao().obtenerTodos();
-                //listaAlumnos = bd.alumnoDao().obtenerTodos();
+
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        listOrdenes = findViewById(R.id.listViewAlumnos);
-                        //listAlumnos = findViewById(R.id.listViewAlumnos);
-                        //ArrayAdapter adaptador = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1,listaAlumnos);
-                        ArrayAdapter adapt = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1,listaOrdenes);
-                        listOrdenes.setAdapter(adapt);
-                        //listAlumnos.setAdapter(adaptador);
+                        adaptador = new ArrayAdapter(getBaseContext(), android.R.layout.simple_list_item_1,listaOrdenes);
+                        listOrdenes.setAdapter(adaptador);
                     }
                 });
 
 
             }
         }).start();
+
+
 /*
         try {
             Thread.sleep(1000);
@@ -58,9 +81,9 @@ public class ActivityConsultas extends Activity {
 
         }*/
 
-
-
     }
+
+
 
 
 

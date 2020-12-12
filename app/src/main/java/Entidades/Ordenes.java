@@ -83,12 +83,10 @@ public class Ordenes {
 
     @Override
     public String toString() {
-        return "Ordenes{" +
-                "idOrden='" + idOrden + '\'' +
-                ", fecha='" + fecha + '\'' +
-                ", cantidad=" + cantidad +
-                ", tipoPago='" + tipoPago + '\'' +
-                ", idMesero='" + idMesero + '\'' +
-                '}';
+        return  idOrden +
+                " Fecha : " + fecha  +
+                " Cantidad : " + cantidad +
+                " Tipo de pago : " + tipoPago +
+                " Mesero : " + idMesero  ;
     }
 }
