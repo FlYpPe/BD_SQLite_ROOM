@@ -41,7 +41,19 @@ public class ActivityModificaciones extends Activity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                //EscuelaBD bd = Room.databaseBuilder(getBaseContext(),EscuelaBD.class, "escuela").build();
+
+                if (fecha.getText().toString().trim().equals("")||idOrden.getText().toString().trim().equals("")
+                        ||cantidad.getText().toString().trim().equals("")|| tipo.getText().toString().trim().equals("")
+                        ||meserom.getText().toString().trim().equals("")){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(getBaseContext(), "checar informacion", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }else{
+
+
 
 
                 try {
@@ -72,17 +84,8 @@ public class ActivityModificaciones extends Activity {
                     e.printStackTrace();
                 }
 
+                }
 
-
-                //bd.alumnoDao().modificarPorNumControl("01", "SALVATORE");
-                /*-----------------------------------------------------------------------------
-                            PRUEBA QUE NO DEBERIA IR AQUI
-                 ------------------------------------------------------------------------------- */
-                //bd.alumnoDao().eliminarPorNumControl("04");
-
-                /*-----------------------------------------------------------------------------
-                            PRUEBA QUE NO DEBERIA IR AQUI
-                 ------------------------------------------------------------------------------- */
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
