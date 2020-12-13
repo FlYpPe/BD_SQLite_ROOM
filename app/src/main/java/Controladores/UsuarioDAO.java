@@ -14,6 +14,6 @@ public interface UsuarioDAO {
     public void insertarUsuario(Usuario usuarrio);
 
 
-    @Query("SELECT * FROM Usuario WHERE usuario LIKE :io")
+    @Query("SELECT * FROM Usuario WHERE usuario = :io")
     Usuario obtenerUno(String io);
 }
