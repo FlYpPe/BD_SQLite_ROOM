@@ -21,6 +21,7 @@
         <activity android:name=".ActivityConsultas"></activity>
         <activity android:name=".ActivityModificaciones"></activity>
         <activity android:name=".ActivityBajas"></activity>
+        <activity android:name=".ActivityUsuario"></activity>
 
     </application>
 

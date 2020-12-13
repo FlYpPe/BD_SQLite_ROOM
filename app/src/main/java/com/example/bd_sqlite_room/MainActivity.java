@@ -20,19 +20,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_acceder: i = new Intent(this, ActivityMenu.class);
             startActivity(i);
             break;
-
+            case R.id.btn_registro: i = new Intent(this, ActivityUsuario.class);
+            startActivity(i);
+            break;
             //case R.id.btn_registro: i = new Intent(this, ActivityRegistro.class);
             //startActivity(i);
             //break;
         }
     }
 
-    public void abrirRegistro(View v){
-
-    }
-
-    public void abirMenu(View v){
-
-    }
 
 }

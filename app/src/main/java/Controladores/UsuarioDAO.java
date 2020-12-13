@@ -15,5 +15,5 @@ public interface UsuarioDAO {
 
 
     @Query("SELECT * FROM Usuario WHERE usuario LIKE :io")
-    Ordenes obtenerUno(String io);
+    Usuario obtenerUno(String io);
 }
