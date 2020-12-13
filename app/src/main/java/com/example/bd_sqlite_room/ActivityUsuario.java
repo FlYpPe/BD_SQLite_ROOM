@@ -25,13 +25,11 @@ public class ActivityUsuario extends Activity {
         contra = findViewById(R.id.cajacontra);
 
     }
-
     public void darAlta(View v){
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-
 
                 try {
                     String a = String.valueOf(usuario.getText());
